@@ -1,0 +1,298 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size
+% ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and
+% 'landscape') and font family ('sans' and 'roman')
+
+\input{config}
+
+
+\title{Curriculum Vitae}
+%\extrainfo{additional information} 
+%\quote{Some quote}                
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+\newcites{conferences}{{Papers in refereed conferences}}
+\newcites{journals}{{Journals}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\AtBeginDocument{%
+    \hypersetup{colorlinks,urlcolor=blue}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Commands
+\newcommand\burl[1]{[\url{#1}]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle%
+% \today
+\renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+% \section{Personal Information}
+% \cvlistitem{Age: 29}
+% \cvlistitem{Date of birth: March 1st, 1990}
+% \cvlistitem{Place of birth: Rosario, Santa Fe, Argentina}
+% \cvlistitem{Nationalities: Argentinian, Italian}
+% \cvlistitem{Argentinian Passport: 35130605N}
+% \cvlistitem{Italian Passport: YA4033590}
+% \cvlistitem{Marital Condition: Single}
+\section{Education}
+\cventry{2015--2023}{PhD Student in Computer Science}{National University of
+  Rosario}{Rosario}{Santa Fe, Argentina}{}
+\cvline{Thesis}{\emph{Effectful Improvement Theory}}
+\cvline{Supervisor}{Dr. Mauro Jaskelioff}
+% \cvline{description}{Cost relations to prove program optimizations in functional
+% languages with algebraic effects.}
+% \cvline{description}{Improvement Theory is theory based on a cost relation of programs where its basic
+%   observation is related to improve certain resource consumption, such as
+%   energy or evaluation steps. Since it is based on exact costs, it is extremely
+%   useful to prove compilers optimization.
+%   There is a fault that the theory depends on features of the evaluation of such
+%   languages, therefore, if someone wants to use such theory for a new language,
+%   she would have to derive a lot of theorems and lemmas before the theory
+%   became useful.
+%   This Thesis presents a way to derive Improvement Theories for different
+%   languages given its interpreters have certain properties such as modularity and
+%   monotonic cost consumption.}
+% {I have a
+% scholarship completely funded by \href{http://www.conicet.gov.ar/}{CONICET}, the national
+% research council
+% and I am currently working at
+% \href{http://www.cifasis-conicet.gov.ar/}{CIFASIS}.}
+\cventry{2008--2015}{Computer Science Degree}{National University
+  of Rosario}{Rosario}{Santa Fe, Argentina}{
+  Grade Point Average: 9.60. Top Student Award Class 2014--2015.}  % arguments 3
+% \cvitem{}{Degree's Thesis}
+\cvline{Thesis}{\emph{Simulation of Parallel Programs in Haskell}}
+\cvline{Advisors}{Dr. Mauro Jaskelioff and Dr. Exequiel Rivas}
+% \cvline{description}{%
+%     The use of the basic parallel combinators in \emph{Haskell} produces a certain
+% effect in run-time, which is the parallelization of our program. Since that
+% effect is not directly observable, we can try and guess what happened using
+% tools like \emph{ThreadScope}. However, one can not match the behavior of the
+% program's execution and its source code. Therefore, in this work we designed an
+% EDSL around the basic combinators to produce a \emph{parallel structure} of
+% programs, a data type that reassembles how the parallel combinators were used in
+% the source code, so one can see, and analyze the inherent parallel behavior of
+% our programs. The aim of this work was the development of a tool to make
+% parallelism observable, so one can use this information to help undergraduate
+% students get a better understanding, or to study the parallelism of our
+% programs.
+% } 
+
+\section{Experience}
+\subsection{Postdoc Researcher}
+\cventry{03/2023--Today}{Instituto Madrile\~no de Estudios
+Avanzado}{Madrid}{Espa\~na}{}{%
+Offline monitoring properties of smart-contracts.
+Developing \emph{Termina}, a \textbf{non}-turing complete language designed to
+write safe programs for satellites.
+Theoretical research: developing a specification language breaking the barrier
+between formal specifications and executable programs.
+}{}
+\subsection{Research Programmer}
+\cventry{10/2022--02/2023}{Instituto Madrile\~no de Estudios
+Avanzado}{Madrid}{Espa\~na}{}{%
+Development of offline monitoring indexing providing a bridge between
+HLola~\cite{HLola} and the Tezos Blockchain~(\url{https://tezos.com/}).
+}{}
+\subsection{Visiting PhD Student}
+\cventry{09/2021-09/2022}{Instituto Madrile\~no de Estudios
+Avanzado}{Madrid}{Espa\~na}{}{%
+Mechanization of previous results in \emph{Coq} resulting in a new framework
+called \emph{Multi} implemented to prove and study properties of multi-contract
+interaction and different blockchain features\cite{Ceresa.2022.Multi}.
+%
+Collaboration on the development of online transaction
+monitors~\cite{Capretto.2022.TransactionMonitors} and setchain~\cite{Capretto.2022.Setchain}.
+}{}
+\subsection{Intern}
+\cventry{08/2020-02/2021}{Instituto Madrile\~no de Estudios
+Avanzado}{Madrid}{Espa\~na}{}{%
+Formalizing and implementing several blockchain execution strategies for
+online and onchain smart contract monitoring.
+%
+We also explored:
+\begin{itemize}
+  \item solutions to offline monitoring blockchain and blockchain in order to
+devise new high-level query language;
+  %
+  \item how to retrieve and analyze ephemeral data employed by the blockchain
+ecosystem, e.g. the mempool, branch-blocks, for off-line monitoring implementations;
+  %
+  \item solutions to mitigate front-running attacks
+\end{itemize}
+}{}
+\cventry{03/2013--09/2013}{Instituto Madrile\~no de Estudios
+Avanzado}{Madrid}{Espa\~na}{}{%
+Building a tool for synthesizing and automatic proving cryptographic
+constructions for \href{www.easycrypt.info}{EasyCrypt}.
+%
+Consisted of: Learning about Modern Cryptography proofs, game simulation based
+proofs.
+Tactics implemented: field/ring equality, and automatic optimistic sampling
+tactic.
+Language employed: OCaml.
+}{}
+
+\subsection{Projects}
+\cvline{Termina}{Transpiler from Termina language to C.}
+\cvline{Multi}{Coq Multi Smart-Contract Interaction library exploring different
+smart-contracts execution models.}
+\cvline{HLola}{Haskell Lola
+  implementation\burl{https://github.com/imdea-software/hlola}. Remote
+  collaboration with the Stream Runtime Verification group at IMDEA-Software.} 
+\cvline{QuickFuzz}{An automatic random fuzzer for common file formats. Open
+Source project. Haskell Code:
+\burl{https://github.com/CIFASIS/QuickFuzz}.}
+\cvline{MegaDeTh}{An experimental automatic and \textbf{aggressive} instance
+derivator in Haskell using Template Haskell. Open Source project. Haskell Code:
+\burl{https://github.com/CIFASIS/megadeth}}
+
+% \newpage
+
+\subsection{Teaching}
+\cventry{2019--2021}{Adjunct Professor}{National University of Rosario}{Rosario}{Argentina}{}
+% \cventry{2019--}{Adjunct Professor}{Compilers}{National University of
+%   Rosario}{}
+\cvitem{Parallel and Concurrent Programs}{%
+  I taught the basic mechanisms and problems of concurrent
+  and parallel programming. It is taught in \emph{C} and \emph{Erlang}.}
+\cvitem{Compilers Course}{This course is based on the implementation
+of a full \emph{Tiger's} compiler, presented by Andrew Appel's book
+\emph{Modern Compilers Implementation in ML}, without optimizations.}
+\cventry{2011 - 2019}{Teacher Assistant}{National University of Rosario}{Rosario}{Argentina}{}
+\cvitem{}{Worked in courses that involved:}
+\cvlistitem{Data Structures and Algorithms in C}
+\cvlistitem{Compiler Theory and Practice}
+\cvlistitem{Concurrent Programming in Erlang}
+\cvlistitem{Introduction to pure programming languages and Haskell}
+\cvlistitem{Parallel Thinking in Haskell}
+\cvlistitem{Introduction to Lambda Calculus, STLC, Intermediate functional programming in Haskell}
+\cvlistitem{Introduction to Intuitionistic Logic}
+\cvlistitem{Introduction to Generalized Abstract Data Types}
+\cvitem{}{My responsibilities included: assisting and conducting practical exercising
+  hours, proposing exams and final projects, and grading practice exams.}
+\cventry{09/2015--02/2016}{Teacher}{Introduction to Mathematics}{National
+University of Rosario}{}{Introductory course for pre-university students. I
+presented an introduction to basic mathematics, as well as assist them in solving
+exercises.}
+
+\newpage
+\subsection{Programming Competitions}
+\cventry{2009}{3rd prize in the First Competitive Programming Encounter}{Santa Fe}{Argentina}{}{}{}
+\cventry{2009}{Participant in South America Regional ACM-ICPC}{Buenos Aires}{Argentina}{}{}{}
+
+\section{Skills}
+\cvline{Languages}{Haskell (proficient), Agda (experienced), SML (prior experience), OCaml
+  (prior experience), C (prior experience), Erlang (prior experience) }
+\cvline{Proof Assistants}{Coq (experienced)}
+\cvline{Specification Languages}{Z, CSP, TLA, Statecharts}
+\cvline{Technologies}{ViM, Git, \LaTeX, Markdown, Org, GNU/Linux}
+\cvline{Haskell Environment}{Property Based Testing (QuickCheck),
+Metaprogramming (Template Haskell), XMonad, stack, cabal}
+% \cvline{Others}{R, prolog, Scilab}
+
+\subsection{Languages}
+\cvitemwithcomment{Spanish}{Native}{}
+\cvitemwithcomment{English}{Advance}{Fluent Written and Spoken}
+
+% \section{Extra Courses}
+\subsection{Courses}
+\cventry{2019}{\(\pmb{\lambda}\)-Calculus and Reasonable Cost Models}{Buenos
+Aires}{Argentina}{}{Introduction to reasonable cost models. Size
+explosion. Abstract machines and a proof that the call-by-name weak \(\lambda\)-calculus is
+reasonable. The call-by-value case. The open case and its different
+presentation.The standardization theorem and the subterm property.}
+\cventry{2018}{DeepSpec Summer School}{Princeton, NJ}{}{}{\burl{https://deepspec.org/event/dsss18/}}
+\cventry{2018}{Topology II}{National University of Rosario}{Rosario}{Santa Fe,
+    Argentina}{Introduction to algebraic Topology.}
+\cventry{2018}{Topology I}{National University of Rosario}{Rosario}{Santa Fe,
+    Argentina}{Introduction to Topology.}
+\cventry{2018}{Haskell's Type System/GHC and its extensions}{Escuela de Verano
+  de Ciencias Informáticas}{Rio Cuarto}{Cordoba,
+  Argentina}{FlexibleContexts, FlexibleInstances, GADTs, Phantom Types,
+RankNPoly, DataKinds, MultiParamTypeClasses, FunctionalDependencies,
+TypeFamilies. \href{https://cs.famaf.unc.edu.ar/~hoffmann/rio18/}{Course Information}}
+\cventry{2016}{Quantum Computing Introduction and Foundation of Programming
+    Languages}{National University of Rosario}{Rosario}{Santa Fe,
+    Argentina}{Introduction to quantum computing by Alejandro Díaz-Caro.}
+\cventry{2016}{Programming with Categories}{National University of Rosario}{Rosario}{Santa Fe, Argentina}
+{Introduction to Category Theory and Agda by Mauro Jaskelioff.}
+\cventry{2014}{Interactive theorem proving: theory and practice}{University of
+Buenos Aires}{Buenos Aires}{Buenos Aires, Argentina}{Introduction to Coq.
+Natural deduction, Curry-Howard correspondence and Lambda Calculus.
+\href{http://www.dc.uba.ar/events/eci/2014/cursos/ziliani}{Course Information}.}
+\cventry{2011}{Type Theory}{National University of Rosario}{Rosario}{Santa Fe, Argentina}{Dependent Type Programming with Agda by Thorsten Altenkirch.}
+
+\subsection{Online Courses}
+\cventry{2015}{Paradox and Infinity}{Agustín
+Rayo}{MIT}{Edx}{\href{https://verify.edx.org/cert/b343b0a81d54493289f2b06ca57c4fde}{Approved
+Certification}.}
+
+% Publications from a BibTeX file using the multibib package
+\section{Publications}
+%%%%%%%%%%%%%%%% Journals
+\bibliographystylejournals{plain}
+\nocitejournals{QF:Jorn}
+\nocitejournals{CeresaEffectful}
+\bibliographyjournals{journals}                   % 'publications' is the name of a BibTeX file
+%%%%%%%%%%%%%%%% Conferences
+\bibliographystyleconferences{plain}
+\nociteconferences{HLola}
+\nociteconferences{QF:Haskell}
+\nociteconferences{Ceresa.2022.Multi}
+\nociteconferences{Capretto.2022.Setchain}
+\nociteconferences{Capretto.2022.TransactionMonitors}
+\bibliographyconferences{conferences}                   % 'publications' is the name of a BibTeX file
+
+% \subsection{Personal Skills}
+% \cvitem{}{An active and continuous learner}
+% \cvitem{}{Excellent predisposition to challenges}
+
+% \clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}     % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+% \section{Research Statement}
+
+% One of my main interest is functional programming languages.
+% I think that we can use functional programming as a tool to
+% understand how programming works, in particular pure functional languages give
+% us the ways to explicitly observe what is going on, understand what we are
+% observing, and build new concepts. It gives us the tools to think, create and
+% test our ideas based in powerful mathematical concepts.
+
+% I am working on a verified library in Agda to analyze costs models based on
+% Category Theory. The main idea is to find a bridge between Improvement Theory
+% developed by Andrew Sands and Functorial Semantics developed by Daniele Turi and
+% Gordon Plotkin where I would like to build an improvement theory based on GSOS
+% rules.
+
+% My interest includes: functional programming, compiler theory, denotational
+% semantics, generic programming, static analysis and type theory.
+% I like Category Theory, abstract mathematical tools,
+% and love Haskell.
+%\makeletterclosing
+
+\end{document}
+%% end of file `template.tex'.
+
+% \subsection{Have Experience With}
+% \cvline{Formal Specification Languages}{Z, CSP, TLA/TLA+, Statecharts}
+% \cvline{Database Theory}{SQL, Entity-Relationship Model, Relational Algebra}
+% \cvline{Technologies}{Emacs}
+% \cvline{Languages}{Erlang, OCaml}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{}

@@ -1,0 +1,329 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', éxecutivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', óldstyle' and 'banking'
+\moderncvcolor{green}                          % color options 'blue' (default), órange', 'green', 'red', 'purple', 'grey' and 'black'
+% \renewcommand{\familydefault}{\rmdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\definecolor{greencv}{rgb}{0.55,0.85,0.35}
+\definecolor{greycv}{rgb}{0.75,0.75,0.75}
+
+\newcommand\ssect[1]{%
+  \cvitem{\color{greycv}\rule{1cm}{.5ex}}{#1} % {2019}{\hrulefill}
+}
+
+% character encoding
+\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+\usepackage{amsbsy}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}      % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Martín}
+\familyname{Ceresa}
+\title{Curriculum Vitae}                          % optional, remove / comment the line if not wanted
+\address{Pte. Roca 1610 6 `B'}{2000 Rosario}    % optional, remove / comment the line if not wanted
+\mobile{+54~9~(0341)~5064~253}                     % optional, remove / comment the line if not wanted
+%\phone{+54~(0341)~448~8291}                      % optional, remove / comment the line if not wanted
+\email{martin@dcc.fceia.unr.edu.ar}                          % optional, remove / comment the line if not wanted
+%% \homepage{www.cifasis-conicet.gov.ar/ceresa}                    % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}            % optional, remove / comment the line if not wanted
+%\photo[104pt][0pt]{fotos/tincho}                  % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                            % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+\newcites{conferences}{{Publicaciones en Conferencias con Referato}}
+\newcites{journals}{{Revistas}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\AtBeginDocument{%
+    \hypersetup{colorlinks,urlcolor=blue}
+}
+
+%%Command
+\newcommand\burl[1]{[\url{#1}]}
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                     % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle%
+%\today
+\renewcommand{\listitemsymbol}{\(\bullet~\)}            % change the symbol for lists
+% \renewcommand{\listitemsymbol}{\(\pmb{+~}\)}            % change the symbol for lists
+% \renewcommand{\listitemsymbol}{-~}            % change the symbol for lists
+\section{Información Personal}
+\cvlistitem{Edad: 29}
+\cvlistitem{Fecha de Nacimiento: 1ro de Marzo, 1990}
+\cvlistitem{Lugar de Nacimiento: Rosario, Santa Fe, Argentina}
+\cvlistitem{Nacionalidades: Argentina, Italiana}
+\cvlistitem{Estado Civil: Soltero}
+\section{Educación}
+\cventry{2015--Actualidad}{Estudiante de Doctorado en Informática}{Universidad
+    Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{%
+        Obtuve una beca por parte del {CONICET}\burl{http://www.conicet.gov.ar/}. Actualmente me encuentro
+    situado en el {CIFASIS}\burl{http://www.cifasis-conicet.gov.ar/}.
+  Se espera defender la Tesis Doctoral en el 2020.}
+\cventry{2008--2015}{Licenciado en Cs.\ de la Computación}{Universidad
+  Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{
+  Duración de la carrera: 7 años, con un promedio de 9.60.\\
+  Tesina presentada: ``Simulación de Programas Paralelos en Haskell'' bajo la
+  dirección del Dr.\ Mauro Jaskelioff y codirección del Lic. Exequiel Rivas.}
+\subsection{Cursos}
+\ssect{2018}
+\cventry{}{Topología II}{Universidad Nacional de Rosario}{Rosario}{Santa Fe,
+  Argentina}{Presencial en calidad de oyente con una carga horaria de 70 hs}
+\cventry{}{Topología I}{Universidad Nacional de Rosario}{Rosario}{Santa Fe,
+  Argentina}{Presencial, aprobado con una carga horaria de 70 hs}
+\cventry{}{Semántica, Análisis y Verificación de Programas}{Universidad Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{Presencial, aprobado con una carga horaria de 70 hs}
+\ssect{2016}
+\cventry{}{Categorías en la Programación}{Universidad Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{Presencial, aprobado con una carga horaria de 70 hs}
+\cventry{}{Tópicos de la Computación Cuántica y Fundamentos de Lenguajes de Programación}{Universidad Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{Presencial, aprobado con una carga horaria de 70 hs}
+% \cventry{---}{Dualidad profesional ingeniero-docente: Hacia una enseñanza eficaz}{Universidad Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{}
+% \cventry{}{Pensando estrategias institucionales que favorezcan la construcción del oficio de estudiante universitario}
+% {Universidad Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{Presencial en
+%   calidad de oyente con una carga horaria de 30 hs}
+\clearpage
+\ssect{2015}
+\cventry{}{Epistemología}{Universidad Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{Presencial, aprobado con una carga horaria de 40 hs}
+\ssect{2011}
+\cventry{}{Teoría de Tipos: Programación Funcional Avanzada en Agda}{Universidad Nacional de Rosario}{Rosario}{Santa Fe, Argentina}{Presencial, aprobado con una carga horaria de 30 hs}
+
+\subsection{Escuelas de Verano/Invierno}
+\cvitem{ECI}{\textbf{\(\lambda\)-Calculus and Reasonable Cost Models}.
+  Curso aprobado dictado en la escuela de invierno de la
+  Universidad de Buenos Aires edición 2019 por el Dr.Beniamino Accattoli.}
+\cvitem{DeepSpec}{Participación en la \textbf{escuela de verano DeepSpec}\burl{https://deepspec.org/event/dsss18/}
+  edición 2018 realizada en \emph{Princeton, NJ}}
+\cvitem{Rió Cuarto}{\textbf{El sistema de tipos de Haskell/GHC}. Curso
+  aprobado dictado en la escuela de verano de la Universidad Rió Cuarto edición 2018.}
+\cvitem{ECI}{\textbf{Demostración interactiva de teoremas: teoría y
+    práctica}. Curso aprobado dictado en la escuela de invierno de la
+  Universidad de Buenos Aires edición 2014.}
+
+\subsection{Cursos Online}
+\cventry{2015}{Paradox and Infinity}{Agustín
+  Rayo}{MIT}{Edx}{Certificación:~\burl{https://verify.edx.org/cert/b343b0a81d54493289f2b06ca57c4fde}.}
+\cventry{2013}{Introduction to Mathematical Philosophy}{H. Leitgeb S.
+  Hartmann}{Ludwig-Maximilians-Universität München}{Coursera}
+  {En calidad de participante.}
+
+\subsection{Otras Carreras}
+\cvlistitem{Alumno en la carrera de Licenciatura en Filosofía plan 1985R, año
+  de ingreso 2016.}
+\cvlistitem{Alumno en la carrera de Licenciatura en Matemáticas plan 03, año
+  de ingreso 2010.}
+
+\section{Experiencia Laboral}
+\cventry{03--07/2014}{Fantommers. Programador Web en C$\sharp$}{}{}{}{}
+\cventry{03--09/2013}{Instituto Madrile\~no de Estudios Avanzado}{Madrid}{Espa\~na}{Desarrollo
+    de métodos de síntesis y verificación automática de construcciones 
+    criptográficas para {EasyCrypt}~\burl{www.easycrypt.info}. Trabajo íntegramente
+    realizado en OCaml}{}{}
+
+% \subsection{Competiciones}
+% \cventry{2009}{3er premio en el Primer Encuentro de Programación Competitiva}{Santa Fe}{Argentina}{}{}{}
+% \cventry{2009}{Participante en la South America Regional ACM-ICPC}{Buenos Aires}{Argentina}{}{}{}
+
+\section{Docencia}
+
+\subsection{Actividad Docente}
+\ssect{2019}
+\cventry{Ay 1ra}{Compiladores}{Universidad
+Nacional de Rosario}{}{}{}
+\cventry{Ay 1ra}{Estructura de Datos y Algoritmos I}{Universidad Nacional de Rosario}{}{}{}
+\clearpage
+\ssect{2018}
+\cventry{Ay 1ra}{Compiladores}{Universidad
+Nacional de Rosario}{}{}{}
+\cventry{}{Sistemas Operativos I}{Universidad Nacional de Rosario}{}{}{}
+\ssect{2017}
+\cventry{JTP}{Compiladores}{Universidad Nacional de Rosario}{}{}{}
+\cventry{}{Estructuras de Datos y Algoritmos II}{Universidad Nacional de Rosario}{}{}{}
+\cventry{Prof. Cont}{Cursillo Introducción a
+las Ciencias de la Computación}{Universidad Nacional de Rosario}{}{}{}
+\ssect{2016}
+\cventry{JTP}{Compiladores}{Universidad Nacional de Rosario}{}{}{}
+\cventry{}{Estructuras de Datos y Algoritmos II}{Universidad Nacional de Rosario}{}{}{}
+\cventry{Prof. Cont}{Cursillo Introducción de
+Matemáticas}{Universidad Nacional de Rosario}{}{}{}
+\ssect{2015}
+\cventry{Ay 2da}{Compiladores}{Universidad Nacional de Rosario}{}{}{}
+\cventry{}{Estructuras de Datos y Algoritmos I}{Universidad Nacional de Rosario}{}{}{}
+\ssect{2014}
+\cventry{Ay 2da}{Compiladores}{Universidad Nacional de Rosario}{}{}{}
+\cventry{}{Estructuras de Datos y Algoritmos I}{Universidad Nacional de Rosario}{}{}{}
+\cventry{Tutor}{Programa de Tutorías por pares}{Universidad Nacional de Rosario}{}{}{}
+\ssect{2012}
+\cventry{Ay 2da}{Análisis de Lenguajes de Programación}{Universidad Nacional de Rosario}{}{}{}
+\cventry{}{Estructuras de Datos y Algoritmos II}{Universidad Nacional de Rosario}{}{}{}
+
+\subsection{Extensión a la Comunidad}
+\ssect{2019}
+\cventry{Docente}{Módulo Programación Móviles}
+{Especialización Docente de Nivel Superior en Didáctica de las Ciencias de la Computación}
+{Universidad Nacional de Rosario-Escuela Normal Superior No. 36-Fundación
+  Sadosky}{}{}
+\ssect{2018}
+\cventry{}{Módulo Robótica}{Especialización Docente de Nivel Superior en Didáctica de las Ciencias de la Computación}{Universidad Nacional de Rosario-Escuela Normal Superior No. 36-Fundación Sadosky}{}{}
+\cventry{}{Módulo Pensamiento Computacional
+  II}{Especialización Docente de Nivel Superior en Didáctica de las Ciencias de la Computación}{Universidad Nacional de Rosario-Escuela Normal Superior No. 36-Fundación Sadosky}{}{}
+\ssect{2017}
+\cventry{}{Módulo Pensamiento Computacional
+  I}{Especialización Docente de Nivel Superior en Didáctica de las Ciencias de
+  la Computación}{Universidad Nacional de Rosario-Escuela Normal Superior No.
+  36-Fundación Sadosky}{}{}
+\clearpage
+\ssect{2016}
+\cventry{}{Taller de Instalación de Software Libre}{\(1^{er}\) Festival Cultura
+  Libre}{Universidad Nacional de Rafaela}{Santa Fe}{}{}
+
+\subsection{Formación de Recursos Humanos}
+\ssect{Tesina}
+\cvitem{Título:}{\emph{Modelando Generadores de Datos Aleatorios
+    Mediante Procesos Estocásticos.} Tesina de grado del alumno Agustín Mista
+  presentada en 2018, participación como \emph{codirector} con Dr. Alejandro Russo.}
+\ssect{Pasantías}
+\cvitem{Título:}{\emph{Generación de valores basado en la extracción del
+    álgebra de librerías.} Realizada por el alumno Agustín Mista dirigida en
+  conjunto con el Dr. Gustavo Grieco en el año 2017.}
+\cvitem{Título:}{\emph{Generación aleatoria de Código respetando
+    Coherencia de Variables.} Realizada por
+  el alumno Franco Costantini dirigida en conjunto con el Dr. Gustavo Grieco en el año 2016.}
+
+\subsection{Tareas de Evaluación}
+\ssect{Corrección de Tesinas}
+\cvitem{}{\emph{Demostrando normalización fuerte sobre una extensión cuántica
+  del lambda cálculo.} Autor: Juan Pablo Rinaldi, presentada 2018.}
+\cvitem{}{\emph{Simulación Paralela de Sistemas Continuos a través de
+    Nodos Virtuales.} Autor: Manuel Dipré, presentada 2016.}
+\ssect{Otras}
+\cvitem{}{Participación en el comité de evaluación de artefactos
+  ICFP'19\burl{https://icfp2019aec.hotcrp.com}}
+% \cvitem{}{}
+
+\subsection{Participación en Consejos}
+\cvlistitem{Participación en el Consejo de la Escuela de
+  Ciencias Exactas y Naturales en calidad de Consejero Docente. Periodo 2018-2019}
+\cvlistitem{Participación en el Consejo de Departamento de Conciencias de la Computación
+  calidad de Consejero Docente. Periodo 2017-2018}
+\cvlistitem{Participación en el Consejo de la Escuela de
+  Ciencias Exactas y Naturales en calidad de Consejero Estudiantil. Periodo 2011-2012}
+
+\subsection{Participación en Concursos Internos DCC}
+\cvlistitem{Concurso 828 - 2012, en calidad de alumno}
+\cvlistitem{Concurso 669 - 2011, en calidad de alumno}
+\cvlistitem{Concurso 611 - 2010, en calidad de alumno}
+
+% \section{Habilidades Computacionales}
+% \cvitem{Lenguajes de Programación}{Haskell, C/C++, ML, Agda, OCaml}
+% \cvitem{Asistentes de Prueba}{Agda, Coq}
+% % \cvitem{Lenguajes de Especificaciones Formales}{Z, CSP, TLA/TLA+, Statecharts}
+% % \cvitem{Teoría de Base de Datos}{SQL, Entity-Relationship Model, Relational Algebra}
+% \cvitem{Sistemas Operativos}{GNU/Linux}
+% \cvitem{Otros}{LaTex, Literal Haskell}
+%\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+
+%\section{Interests}
+%\cvitem{Sports}{I play football and I do capoeira, swim as hobbies. As well I prefer going by bike over bus}
+%\cvitem{Reading}{I prefer a book over a movie. Enthusiastic science fiction reader.}
+
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5\cite{book1}}
+%\cvlistdoubleitem{Item 3}{}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}                   % 'publications' is the name of a BibTeX file
+\section{Proyectos}
+\cvitem{En Proceso}{PID-UNR: \emph{Aprendizaje y Enseñanza de las Ciencias de la
+    Computación en el Nivel Primario} a cargo de las investigadoras Dra. Ana
+  Casali a ejecutar 2019-2022.}
+\cvitem{Finalizados}{PICT-201-0464:\emph{Fundamentos de las Teorías de
+    Mejora de Programa} a cargo del investigador Mauro Jaskelioff.}
+\cvitem{}{UNR ING-444:\emph{Fundamentos y Aplicaciones de Lenguajes
+    de Dominio Específico} bajo la dirección del Dr. Mauro Jaskelioff.}
+
+\section{Publicaciones}
+%%%%%%%%%%%%%%%% Conferences
+\bibliographystyleconferences{plain}
+\nociteconferences{QF:Haskell}
+\bibliographyconferences{conferences}                   % 'publications' is the name of a BibTeX file
+
+%%%%%%%%%%%%%%%% Journals
+\bibliographystylejournals{plain}
+\nocitejournals{QF:Jorn}
+\bibliographyjournals{journals}                   % 'publications' is the name of a BibTeX file
+\section{Investigación}
+\subsection{Intereses}
+\cvitem{Programación}{Semántica Formal de Programas, Programación Funcional, Programación Genérica, Teoría de Compiladores}
+\cvitem{Matemáticas}{Topología, Teoría de Categorías, Teoría de Tipos, Filosofía}
+\cvitem{Computación}{Computabilidad, Teoría de Pruebas, Filosofía}
+\subsection{Grupos}
+\cvlistitem{Miembro del grupo de investigación \emph{Fundamentos y Aplicaciones
+    de la Lógica y la
+    Programación}\burl{https://www.cifasis-conicet.gov.ar/grupos/6}.}
+\cvlistitem{Miembro del grupo de investigadores \emph{Fundamentos de Lenguajes
+de Programación}\burl{https://sites.google.com/view/funlep}.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% {\color{greycv}\rule{\textwidth}{1ex}}
+\subsection{Actualidad}
+
+\cvlistitem{
+  Me encuentro trabajando principalmente en mi tesis doctoral, donde
+  se busca presentar la construcción de una \emph{Teoría de Mejoras} a partir de
+  caracteriza el lenguaje y sus evaluadores mediante \emph{Álgebras Semánticas}. El
+  objetivo es permitir construir un marco teórico para la demostración de
+  optimizaciones y transformaciones de programas.
+}
+
+\cvlistitem{
+  Colaboro además en el grupo dirigido por Dr.~Cesar~Sanches miembro de
+  \emph{IMDEA Software}. Mi aporte se basa principalmente en aplicar técnicas
+  avanzadas en la construcción de Lenguajes de Dominio Específico con el
+  objetivo de dar una implementación del lenguaje de \emph{Stream Runtime
+      Verification} \emph{LOLA} en \emph{Haskell}, manteniendo las garantías de
+  otras implementaciones como ser el uso de memoria constante.  Presentamos
+  nuevas abstracciones frutos del uso de un lenguaje muy expresivo, como ser el
+  uso de funciones de alto orden, simplificando la creación de librerías para el
+  manejo de expresiones lógicas como ser \emph{Linear Temporal Logic}.
+  Denominamos al fruto del trabajo en conjunto como \textbf{HLola} y esperamos
+  que presenten avances particularmente en el área de \emph{Runtime
+      Verification} y de \emph{Programación Declarativa}.
+}
+\end{document}
+
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}     % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+
+%\[ e=\lim_{n \to \infty} \left(1+\frac{1}{n}\right)^n \]
+
+%\makeletterclosing

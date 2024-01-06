@@ -285,6 +285,23 @@
 
 % v1.1.4: fixes inconsistent font size
 % Fork (before v1.6.5a): Structure modified to include change title, company name, start/end dates and work location (only a string)
+\newcommand{\cveventpp}[4]{%
+  {\large\color{emphasis}#1}
+  \ifstrequal{#2}{}{}{\large{\color{accent} | #2}}
+  % \par\medskip\normalsize
+  \ifstrequal{#3}{}{}{{\small{\color{accent}\faCalendar\color{emphasis}~#3}}}
+  \ifstrequal{#4}{}{}{{\raggedright\small{\color{accent}\color{emphasis}~#4}}}
+  \par\medskip\normalsize
+}
+\newcommand{\cveventp}[4]{%
+  {\large\color{emphasis}#1}
+  \ifstrequal{#2}{}{}{\large{\color{accent} | #2}}
+  \par\medskip\normalsize
+  \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\faCalendar\color{emphasis}~#3}}}
+  \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\color{accent}\color{emphasis}~#4}}}\par
+  \medskip\normalsize
+}
+
 \newcommand{\cvevent}[4]{%
   {\large\color{emphasis}#1}
   \ifstrequal{#2}{}{}{\large{\color{accent} | #2}}

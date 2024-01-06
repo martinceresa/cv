@@ -1,0 +1,149 @@
+% ----- Languages -----
+\cvsection{Languages}
+    %% Fork v1.6.5c: The sloppypar* environment is used to avoid tags overlapping with section width
+    \begin{sloppypar*}
+      \cvtags{Haskell, C, Agda, Coq}
+
+      \divider
+
+      \cvtags{Python, SML, OCaml, Rust, Erlang}
+
+      \divider
+
+      \cvtags{Z, CSP, TLA/TLA+}
+    \end{sloppypar*}
+% ----- Languages -----
+% ----- Tech STACK -----
+\cvsection{TECH Stack}
+    \begin{sloppypar*}
+        \cvtags{Stack, Cabal, QuickCheck, Template Haskell}
+        \cvtags{Monad Transformers, Type Families, GADTs, RankNTypes}
+        \cvtags{Combinatory Parsers}
+
+        \divider
+
+        \cvtags{ViM, XMonad, Hakyll, Git, \LaTeX, Markdown, GNU/Linux, Emacs (Doom), Org}
+    \end{sloppypar*}
+% ----- TECH STACK -----
+
+% ----- LEARNING -----
+% \cvsection{Learning}
+%     \begin{sloppypar*}
+%         \cvtags{???}
+%         \medskip
+
+%     \end{sloppypar*}
+% ----- LEARNING -----
+
+% ----- LANGUAGES -----
+\cvsection{Speak}
+    \cvlang{Spanish}{Native} {\(\mid\)}
+    % \divider
+    \cvlang{English}{Fluent}\\
+    \divider
+    \cvlang{Portuguese}{Basic}
+    %% Yeah I didn't spend too much time making all the
+    %% spacing consistent... sorry. Use \smallskip, \medskip,
+    %% \bigskip, \vpsace etc to make ajustments.
+% ----- LANGUAGES -----
+
+% ----- REFERENCES -----
+\cvsection{References}
+    \cvref{Prof.\ César Sánches}{IMDEA Software Instute}{cesar.sanchez@imdea.org}
+    \divider
+
+    \cvref{Prof.\ Mauro Jaskelioff}{IOG?}{g.delta@business.com}
+% ----- REFERENCES -----
+
+% ----- MOST PROUD -----
+% \cvsection{Most Proud of}
+
+% \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}\\
+% \divider
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}\\
+% \divider
+% \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+% ----- MOST PROUD -----
+
+% \cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+% \wheelchart{1.5cm}{0.5cm}{%
+%   6/8em/accent!30/{Sleep,\\beautiful sleep},
+%   3/8em/accent!40/Hopeful novelist by night,
+%   8/8em/accent!60/Daytime job,
+%   2/10em/accent/Sports and relaxation,
+%   5/6em/accent!20/Spending time with family
+% }
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the current column
+\newpage
+
+% ----- EDUCATION -----
+\cvsection{Education}
+    \cvevent{PhD in Informatics}{UNR}{04 2015 -- 04 2023}{Rosario, Argentina}
+    \begin{itemize}
+        \item Thesis: Effectful Improvement Theory.
+        \item Summary: An improvement theory for programming languages with
+                algebraic effects.
+        \item Advisor: PhD. Mauro Jaskelioff
+    \end{itemize}
+    \divider
+
+    \cvevent{Computer Science Degree}{UNR}{03 2008 -- 03 2015}{Rosario, Argentina}
+    \begin{itemize}
+        \item Title: Simulation of Parallel Programs in Haskell
+        \item Summary: A graphic library to observe and study the ``parallel
+                structure'' of parallel programs in Haskell.
+        % \item Advisors: PhD. Mauro Jaskelioff \\ \hspace{3.1em} \& PhD. Exequiel Rivas
+        \item GPA: 9.60
+    \end{itemize}
+% ----- EDUCATION -----
+
+% ----- PROJECTS -----
+\cvsection{Projects}
+    \cveventpp{Termina}{}{2023 -- Ongoing}{\cvreference{\faGithub}{https://github.com/orgs/termina-lang}}
+    \begin{itemize}
+        \item Transpiler from Termina to C plus a RTOS runtime for embedded systems.
+        \item Implemented in Haskell and runtime in C.
+    \end{itemize}
+    \divider
+
+    \cveventp{Smart Multi Contract Interaction}{}{2021 -- 2022}{\cvreference{\faGitlab}{https://gitlab.com/user/repo}}
+    \begin{itemize}
+        \item Library implementing the computational model of Tezos Blockchain.
+        \item Implemented different scheduling strategies.
+        \item Designed to reason about the behaviour of several contracts
+            interacting within a single transaction.
+    \end{itemize}
+    \divider
+
+    \cveventpp{Haskell Lola}{}{2019 -- 2020}{\cvreference{\faGithub}{https://gitlab.com/user/repo}\cvreference{\faGlobe}{https://software.imdea.org/hlola/}}
+    \begin{itemize}
+        \item Designed the core structure implementing HLola.
+        \item Implemented the main abstraction lifting generic types of Haskell
+employed as data-theories in Lola.
+    \end{itemize}
+    \divider
+
+    \cveventpp{QuickFuzz}{}{2016 -- 2017}{\cvreference{\faGithub}{https://github.com/CIFASIS/QuickFuzz}}
+    \begin{itemize}
+        \item Out-of-the-box fuzzy generation of arbitrary files.
+        \item Implemented Haskell arbitrary instances for arbitrary data
+                structures in Haskell.
+    \end{itemize}
+    \divider
+
+    \cveventpp{MegaDeTh}{}{2016 -- 2017}{\cvreference{\faGithub}{https://github.com/CIFASIS/megadeth}}
+    \begin{itemize}
+        \item Aggressive and generic instance derivation for recursive and
+            mutually dependent Haskell data-types.
+        \item Implemented entirely in Template Haskell.
+    \end{itemize}
+% ----- PROJECTS -----
+%%% Local Variables:
+%%% TeX-master: "ceresa"
+%%% End:
