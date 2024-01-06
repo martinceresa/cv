@@ -1,12 +1,12 @@
 % ----- Languages -----
-\cvsection{Languages}
+\cvsection{Programming Languages}
     %% Fork v1.6.5c: The sloppypar* environment is used to avoid tags overlapping with section width
     \begin{sloppypar*}
-      \cvtags{Haskell, C, Agda, Coq}
+      \cvtags{\textbf{Haskell}, \textbf{Coq}, C, Agda}
 
       \divider
 
-      \cvtags{Python, SML, OCaml, Rust, Erlang}
+      \cvtags{\textbf{Rust}, \textbf{Python}, SML, OCaml, Erlang}
 
       \divider
 
@@ -17,7 +17,7 @@
 \cvsection{TECH Stack}
     \begin{sloppypar*}
         \cvtags{Stack, Cabal, QuickCheck, Template Haskell}
-        \cvtags{Monad Transformers, Type Families, GADTs, RankNTypes}
+        \cvtags{Monad Transformers, Type Families, GADTs, RankNTypes}\\
         \cvtags{Combinatory Parsers}
 
         \divider
@@ -48,8 +48,8 @@
 % ----- LANGUAGES -----
 
 % ----- REFERENCES -----
-\cvsection{References}
-    \cvref{Prof.\ César Sánches}{IMDEA Software Instute}{cesar.sanchez@imdea.org}
+\cvsection{Referees}
+    \cvrefWeb{Prof.\ César Sánches}{https://software.imdea.org/~cesar/}{IMDEA Software Instute}{cesar.sanchez@imdea.org}
     \divider
 
     \cvref{Prof.\ Mauro Jaskelioff}{IOG?}{g.delta@business.com}
@@ -106,43 +106,39 @@
 % ----- PROJECTS -----
 \cvsection{Projects}
     \cveventpp{Termina}{}{2023 -- Ongoing}{\cvreference{\faGithub}{https://github.com/orgs/termina-lang}}
-    \begin{itemize}
-        \item Transpiler from Termina to C plus a RTOS runtime for embedded systems.
-        \item Implemented in Haskell and runtime in C.
-    \end{itemize}
+    Transpiler from Termina to C plus a RTOS runtime for embedded systems.
+    Designed and implemented in Haskell and runtime in C.
     \divider
 
     \cveventp{Smart Multi Contract Interaction}{}{2021 -- 2022}{\cvreference{\faGitlab}{https://gitlab.com/user/repo}}
-    \begin{itemize}
-        \item Library implementing the computational model of Tezos Blockchain.
-        \item Implemented different scheduling strategies.
-        \item Designed to reason about the behaviour of several contracts
-            interacting within a single transaction.
-    \end{itemize}
+    Desgined and implemented a Coq library to reason about multi smart-contract
+interaction following the computational model of the Tezos Blockchain.
+
     \divider
 
     \cveventpp{Haskell Lola}{}{2019 -- 2020}{\cvreference{\faGithub}{https://gitlab.com/user/repo}\cvreference{\faGlobe}{https://software.imdea.org/hlola/}}
-    \begin{itemize}
-        \item Designed the core structure implementing HLola.
-        \item Implemented the main abstraction lifting generic types of Haskell
+    Designed the core structure implementing HLola.
+    Implemented the main abstraction lifting generic types of Haskell
 employed as data-theories in Lola.
-    \end{itemize}
+
     \divider
 
     \cveventpp{QuickFuzz}{}{2016 -- 2017}{\cvreference{\faGithub}{https://github.com/CIFASIS/QuickFuzz}}
-    \begin{itemize}
-        \item Out-of-the-box fuzzy generation of arbitrary files.
-        \item Implemented Haskell arbitrary instances for arbitrary data
+        Out-of-the-box fuzzy generation of arbitrary files.
+        Implemented Haskell arbitrary instances for arbitrary data
                 structures in Haskell.
-    \end{itemize}
+
     \divider
 
     \cveventpp{MegaDeTh}{}{2016 -- 2017}{\cvreference{\faGithub}{https://github.com/CIFASIS/megadeth}}
-    \begin{itemize}
-        \item Aggressive and generic instance derivation for recursive and
-            mutually dependent Haskell data-types.
-        \item Implemented entirely in Template Haskell.
-    \end{itemize}
+    Aggressive and generic instance derivation for recursive and mutually
+dependent Haskell data-types.
+    Implemented entirely in Template Haskell.
+
+    \divider
+    \cveventpp{EasyCrypt}{}{2013}{\cvreference{\faGithub}{https://github.com/EasyCrypt/easycrypt}}
+    Implemented tactics to simplify equations over rings and fields.
+    Designed and implemented automatic optimistic sampling.
 % ----- PROJECTS -----
 %%% Local Variables:
 %%% TeX-master: "ceresa"

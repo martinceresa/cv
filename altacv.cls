@@ -413,20 +413,26 @@
 }
 
 % Fork v1.6.5b: Taking from original version, I added some modifications related to optional Linkedin and mail links for each reference (both will be shown only if there is any value)
-\newcommand{\cvref}[3]{%
+\newcommand{\cvrefPrim}[3]{%
   \textcolor{emphasis}{\textbf{#1}}\par
   \smallskip
   \begin{description}[font=\color{accent},style=multiline,leftmargin=1em,align=left]
     \def\temp{#2}\ifx\temp\empty
     \else
-      \item[\faLinkedin] \href{https://linkedin.com/in/#2}{#2}
+          {#2}
     \fi
-    
+
     \def\temp{#3}\ifx\temp\empty
     \else
       \item[\small\normalfont\mailaddresssymbol] \href{mailto:#3}{#3}
     \fi
   \end{description}
+}
+\newcommand{\cvrefWeb}[4]{%
+  \cvrefPrim{#1}{\item[\faGlobe] \href{#2}{#3}}{#4}
+}
+\newcommand{\cvref}[3]{%
+  \cvrefPrim{#1}{\item[\faLinkedin] \href{https://linkedin.com/in/#2}{#2}}{#3}
 }
 
 \newenvironment{cvcolumn}[1]{\begin{minipage}[t]{#1}\raggedright}{\end{minipage}}
