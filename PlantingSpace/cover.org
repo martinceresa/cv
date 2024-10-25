@@ -1,0 +1,5 @@
+To whom it may concern.
+My name is Martin Ceresa, I followed the academic path but I want to change to industry and Planting Space may be a good place for me.
+I focused my PhD on Compilers and Theory of Programming Languages, building a strong mathematical foundation and heavy use of functional programming languages like Haskell.
+Before finishing my PhD, I started working in a broader field, Runtime Verification, with a more practical approach.
+I am happy with my path, it helped me to develop a lot of soft skills and time to study whatever mathematical field appealed to me. But I want a career change, in this case to industry, mainly because, in my opinion, there are more interesting problems (and other sets of constraints). My research led me into a total disconnection from reality and I want to be part of something from the real world.
