@@ -80,34 +80,19 @@
 
 % use ONLY \newpage if you want to force a page break for
 % ONLY the current column
-\newpage
-
-% ----- EDUCATION -----
-\cvsection{Education}
-    \cvevent{PhD in Informatics}{UNR}{04 2015 -- 04 2023}{Rosario, Argentina}
-    \begin{itemize}
-        \item Thesis: Effectful Improvement Theory.
-        \item Summary: An improvement theory for programming languages with
-                algebraic effects.
-        \item Advisor: PhD. Mauro Jaskelioff
-    \end{itemize}
-    \divider
-
-    \cvevent{Computer Science Degree}{UNR}{03 2008 -- 03 2015}{Rosario, Argentina}
-    \begin{itemize}
-        \item Title: Simulation of Parallel Programs in Haskell
-        \item Summary: A graphic library to observe and study the ``parallel
-                structure'' of parallel programs in Haskell.
-        % \item Advisors: PhD. Mauro Jaskelioff \\ \hspace{3.1em} \& PhD. Exequiel Rivas
-        \item GPA: 9.60
-    \end{itemize}
-% ----- EDUCATION -----
+%% \newpage
 
 % ----- PROJECTS -----
 \cvsection{Projects}
-    \cveventpp{Termina}{}{2023 -- Ongoing}{\cvreference{Private Repo}{https://github.com/orgs/termina-lang}}
+    \cveventpp{Termina}{}{2023 -- Ongoing}{\cvreference{\faGithub}{https://github.com/termina-lang/termina}}
     Transpiler from Termina to C plus a RTOS runtime for embedded systems.
     Designed and implemented in Haskell and runtime in C.
+
+    \newpage
+
+    \cveventpp{FraudProofs}{}{2024 -- Ongoing}{\cvreference{\faGitlab}{https://gitlab.software.imdea.org/martin.ceresa/leanfpgames}}
+    Mechanization of Fraud-Proof arbitration games in L2 Optimistic Rollups.
+    Implemented in Lean4, focused on proving honest players always win.
 
     \divider
 
@@ -141,6 +126,28 @@ dependent Haskell data-types.
     Implemented tactics to simplify equations over rings and fields.
     Designed and implemented automatic optimistic sampling.
 % ----- PROJECTS -----
+
+% ----- EDUCATION -----
+\cvsection{Education}
+    \cvevent{PhD in Informatics}{UNR}{04 2015 -- 04 2023}{Rosario, Argentina}
+    \begin{itemize}
+        \item Thesis: Effectful Improvement Theory.
+        \item Summary: An improvement theory for programming languages with
+                algebraic effects.
+        \item Advisor: PhD. Mauro Jaskelioff
+    \end{itemize}
+    \divider
+
+    \cvevent{Computer Science Degree}{UNR}{03 2008 -- 03 2015}{Rosario, Argentina}
+    \begin{itemize}
+        \item Title: Simulation of Parallel Programs in Haskell
+        \item Summary: A graphic library to observe and study the ``parallel
+                structure'' of parallel programs in Haskell.
+        % \item Advisors: PhD. Mauro Jaskelioff \\ \hspace{3.1em} \& PhD. Exequiel Rivas
+        \item GPA: 9.60
+    \end{itemize}
+% ----- EDUCATION -----
+
 %%% Local Variables:
 %%% TeX-master: "ceresa"
 %%% End:
